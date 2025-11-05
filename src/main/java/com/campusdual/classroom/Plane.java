@@ -1,11 +1,31 @@
 package com.campusdual.classroom;
 
-public class Plane {
+public class Plane implements IMachine{
 
     private final String name;
 
     public Plane(String name) {
         this.name = name;
+    }
+
+    @Override
+    public void start() {
+        System.out.println("the plane " + name + "this is on");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("the plane  " + name + "this is off");
+    }
+
+    @Override
+    public void maintenance() {
+        System.out.println("the plane  " + name + "this is maintenance");
+    }
+
+    @Override
+    public void mantenance() {
+
     }
 
     public void takeOff() {
